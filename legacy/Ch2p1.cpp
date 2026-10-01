@@ -1,3 +1,12 @@
+/* SUPERSEDED. Kept for reference only -- this file is not part of the
+ * build, though it was actually fine as written.
+ *
+ * No defects found by the survey: it compiles and prints the limits.h
+ * constants correctly. Moved as-is to chapter2/ex2_01.c (reformatted to
+ * house style, main() wrapped with the usual exercise-statement
+ * comment), pinned by tests/ex2_01.out.
+ */
+
 #include <stdio.h>
 #include <limits.h>
 

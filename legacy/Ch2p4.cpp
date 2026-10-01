@@ -1,3 +1,11 @@
+/* SUPERSEDED. Kept for reference only -- this file is not part of the
+ * build, though the squeeze() logic itself was already correct.
+ *
+ * No logic defects found by the survey. Reformatted to house style
+ * (brace placement, naming) as chapter2/ex2_04.c, pinned by the
+ * test_squeeze() cases in tests/unit_tests.c.
+ */
+
 #include <stdio.h>
 
 void squeeze(char str1[], char str2[]);

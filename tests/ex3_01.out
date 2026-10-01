@@ -1,0 +1,6 @@
+value 0: binsearch1 -> 0, binsearch2 -> 0
+value 1: binsearch1 -> 1, binsearch2 -> 1
+value 100: binsearch1 -> 100, binsearch2 -> 100
+value 19999: binsearch1 -> 19999, binsearch2 -> 19999
+value 20000: binsearch1 -> -1, binsearch2 -> -1
+value -5: binsearch1 -> -1, binsearch2 -> -1

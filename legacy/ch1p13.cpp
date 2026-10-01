@@ -1,3 +1,24 @@
+/* SUPERSEDED. Kept for reference only -- this file is not part of the
+ * build and is known to be incorrect.
+ *
+ * 1. `if word[i] >= res){` is missing its opening parenthesis around
+ *    the condition -- does not compile.
+ * 2. The two histogram-printing `for` loops and the bar-drawing loop are
+ *    nested and braced incorrectly: closing braces are missing/misplaced
+ *    so the printing loops end up inside the word-reading `while`, and
+ *    a `putchar`/`printf("\n")` sits inside the bar loop instead of
+ *    after it, which would print a newline after every single star.
+ * 3. `res =++ word[lenofword-1];` and `res =++ word[MAX];` read as
+ *    `res = (++word[...])`, which does increment the right bucket, but
+ *    combined with bug 2 the counts it prints never match what was
+ *    counted, and the whole program never reaches a working state to
+ *    check.
+ *
+ * Replaced by chapter1/ex1_13.c, which counts word lengths into an
+ * array first and only then prints the histogram, pinned by
+ * tests/ex1_13.out.
+ */
+
 #include <stdio.h>
 
 #define MAX 10
