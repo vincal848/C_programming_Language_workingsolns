@@ -1,6 +1,6 @@
 # C_programming_Language_workingsolns
 
-[![tests](https://github.com/vincal848/C_programming_Language_workingsolns/actions/workflows/tests.yml/badge.svg)](https://github.com/vincal848/C_programming_Language_workingsolns/actions/workflows/tests.yml)
+[![tests](https://github.com/vincal848/k-and-r-c-solutions/actions/workflows/tests.yml/badge.svg)](https://github.com/vincal848/k-and-r-c-solutions/actions/workflows/tests.yml)
 
 This came out of working through Kernighan & Ritchie's *The C Programming
 Language* as a learner. The original commits were written and pushed
