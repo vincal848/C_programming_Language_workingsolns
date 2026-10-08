@@ -20,9 +20,9 @@
 #include <stdio.h>
 #include <ctype.h>
 
-void expand(char s1[], char s2[]);
+void expand(const char s1[], char s2[]);
 
-void expand(char s1[], char s2[])
+void expand(const char s1[], char s2[])
 {
     int i, j;
     char c;

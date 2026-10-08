@@ -14,14 +14,19 @@
  * the init clause); and the whole digit-scanning loop was nested
  * inside `if (line[i] == '0')`, so a hex string with no leading 0 (for
  * example "ff") never got scanned at all and returned 0.
+ *
+ * The result is unsigned long, not int: 8 or more hex digits overflowed
+ * int (undefined behaviour). Unsigned arithmetic wraps by definition, so
+ * input past the width of unsigned long is wrong but never UB.
  */
 #include <stdio.h>
 
-int htoi(char line[]);
+unsigned long htoi(const char line[]);
 
-int htoi(char line[])
+unsigned long htoi(const char line[])
 {
-    int i, x, digit, scanning;
+    int i, digit, scanning;
+    unsigned long x;
 
     i = 0;
     x = 0;
@@ -44,7 +49,7 @@ int htoi(char line[])
             scanning = 0;
 
         if (scanning) {
-            x = 16 * x + digit;
+            x = 16 * x + (unsigned long)digit;
             i++;
         }
     }
@@ -56,14 +61,14 @@ int htoi(char line[])
 int main(void)
 {
     char text[64];
-    int a;
+    unsigned long a;
 
     printf("Enter a hexadecimal string: ");
     if (scanf("%63s", text) != 1)
         return 0;
 
     a = htoi(text);
-    printf("Integer value: %d\n", a);
+    printf("Integer value: %lu\n", a);
 
     return 0;
 }

@@ -9,9 +9,9 @@
  */
 #include <stdio.h>
 
-void squeeze(char s1[], char s2[]);
+void squeeze(char s1[], const char s2[]);
 
-void squeeze(char s1[], char s2[])
+void squeeze(char s1[], const char s2[])
 {
     int i, j, k;
 
