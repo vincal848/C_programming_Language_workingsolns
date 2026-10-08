@@ -18,10 +18,10 @@
 #include <stdio.h>
 #include <string.h>
 
-void escape(char s[], char t[]);
-void unescape(char s[], char t[]);
+void escape(char s[], const char t[]);
+void unescape(char s[], const char t[]);
 
-void escape(char s[], char t[])
+void escape(char s[], const char t[])
 {
     int i, j;
 
@@ -47,7 +47,7 @@ void escape(char s[], char t[])
     s[j] = '\0';
 }
 
-void unescape(char s[], char t[])
+void unescape(char s[], const char t[])
 {
     int i, j;
 

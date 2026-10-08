@@ -1,4 +1,4 @@
-# C_programming_Language_workingsolns
+# k-and-r-c-solutions
 
 [![tests](https://github.com/vincal848/k-and-r-c-solutions/actions/workflows/tests.yml/badge.svg)](https://github.com/vincal848/k-and-r-c-solutions/actions/workflows/tests.yml)
 

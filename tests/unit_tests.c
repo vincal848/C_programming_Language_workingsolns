@@ -24,6 +24,10 @@ static void test_htoi(void)
     assert(htoi("0X1f") == 0x1f);
     assert(htoi("ff") == 0xff);
     assert(htoi("abc") == 0xabc);
+    /* 8 hex digits overflowed int (UB, and ASan/UBSan flagged it) */
+    assert(htoi("7fffffff") == 0x7fffffffUL);
+    assert(htoi("80000000") == 0x80000000UL);
+    assert(htoi("0xffffffff") == 0xffffffffUL);
 }
 
 static void test_squeeze(void)
